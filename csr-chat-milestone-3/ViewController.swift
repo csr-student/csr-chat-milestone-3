@@ -9,7 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBAction func goToSignUp(_ sender: UIButton) {
+        CSRMethods.app.changeScreens(id: "signup")
+    }
+    
+    @IBAction func goToLogin(_ sender: UIButton) {
+        CSRMethods.app.changeScreens(id: "login")
 
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

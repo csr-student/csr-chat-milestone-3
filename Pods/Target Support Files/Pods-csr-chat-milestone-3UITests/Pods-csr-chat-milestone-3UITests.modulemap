@@ -1,0 +1,6 @@
+framework module Pods_csr_chat_milestone_3UITests {
+  umbrella header "Pods-csr-chat-milestone-3UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
