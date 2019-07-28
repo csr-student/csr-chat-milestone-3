@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
             return
         }
         
+        UserDefaults.standard.set(usernameTextField.text!, forKey: "password")
         CSRMethods.app.login(username: usernameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)
     }
     

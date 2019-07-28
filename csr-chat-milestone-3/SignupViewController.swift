@@ -11,7 +11,6 @@ import Firebase
 class SignupViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     
@@ -19,6 +18,7 @@ class SignupViewController: UIViewController {
         CSRMethods.app.changeScreens(id: "home")
 
     }
+    
     @IBAction func trySignup(_ sender: UIButton) {
         if usernameTextField.text! == "" {
             CSRMethods.app.showAlert(titleMessage: "CSR Alert!", messageString: "Incorrect username. Try again!")
@@ -37,10 +37,10 @@ class SignupViewController: UIViewController {
             return
         }
         if passwordTextField.text! != confirmPasswordTextField.text! {
-            CSRMethods.app.showAlert(titleMessage: "CSR Alert!", messageString: "Passwords do not match. Try again!")
+            CSRMethods.app.showAlert(titleMessage: "CSR Alert!", messageString: "Passwords do not match. Please try again!")
             return
         }
-        
+        UserDefaults.standard.set(usernameTextField.text!, forKey: "password")
         CSRMethods.app.signUp(username: usernameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)
         
     }

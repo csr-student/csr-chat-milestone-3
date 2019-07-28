@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class NewsfeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBAction func goBack(_ sender: UIButton) {
         CSRMethods.app.changeScreens(id: "login")
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
