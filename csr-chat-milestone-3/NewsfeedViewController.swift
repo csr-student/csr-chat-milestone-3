@@ -15,6 +15,11 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate, UITableView
         CSRMethods.app.changeScreens(id: "login")
     }
     
+    @IBAction func goToNewPost(_ sender: Any) {
+        CSRMethods.app.changeScreens(id: "writepost")
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
